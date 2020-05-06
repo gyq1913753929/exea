@@ -18,6 +18,11 @@ use Illuminate\Support\Facades\Route;
 // });
 Route::prefix('/brand')->group(function(){
 		Route::get('create','Admin\BrandController@create');
+		Route::post('store','Admin\BrandController@store');
+		Route::get('index','Admin\BrandController@index');
+		Route::get('destroy/{id}','Admin\BrandController@destroy');
+		Route::get('update/{id}','Admin\BrandController@update');
+		Route::post('edit/{id}','Admin\BrandController@edit');
 });
 Route::prefix('/custorm')->group(function(){
 Route::get('/','Admin\CustormController@index');//列表展示
